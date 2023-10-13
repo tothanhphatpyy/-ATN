@@ -1,0 +1,14 @@
+@media (min-width: 992px) {
+  .col-w-20 {
+    flex: 0 0 auto;
+    width: 20% !important;
+  }
+}
+
+.sticky-sidebar{
+  top: 5rem !important;
+}
+
+.items-content-center {
+  align-items: center !important;
+}

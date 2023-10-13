@@ -1,0 +1,220 @@
+//*-----------------------------------------------
+//|   Fonts Family class
+//-----------------------------------------------*/
+.font-base {
+  font-family: $font-base; //Lexend
+}
+
+//*-----------------------------------------------
+//|   Text color
+//-----------------------------------------------*/
+.color-base {
+  color: $text-color-primary !important;
+}
+
+
+//*-----------------------------------------------
+//|   Fonts weight class
+//-----------------------------------------------*/
+.text-100 {
+  font-weight: 100;
+}
+
+.text-200 {
+  font-weight: 200;
+}
+
+.text-300 {
+  font-weight: 300;
+}
+
+.text-400 {
+  font-weight: 400;
+}
+
+.text-500 {
+  font-weight: 500;
+}
+
+.text-600 {
+  font-weight: 600;
+}
+
+.text-700 {
+  font-weight: 700;
+}
+
+.text-800 {
+  font-weight: 800;
+}
+
+.text-900 {
+  font-weight: 900;
+}
+
+.text-1000 {
+  font-weight: 1000;
+}
+
+//*-----------------------------------------------
+//|   Fonts Size class
+//-----------------------------------------------*/
+.text-xs {
+  font-size: 12px;
+}
+
+.text-sm {
+  font-size: 14px;
+}
+
+
+
+.text-white {
+  color: $white;
+}
+
+.text-black {
+  color: $black;
+}
+
+.text-gray-100 {
+  color: $gray-100;
+}
+
+.text-gray-200 {
+  color: $gray-200;
+}
+
+.text-gray-300 {
+  color: $gray-300;
+}
+
+.text-gray-400 {
+  color: $gray-400;
+}
+
+.text-gray-500 {
+  color: $gray-500;
+}
+
+.text-gray-600 {
+  color: $gray-600;
+}
+
+.text-gray-700 {
+  color: $gray-700;
+}
+
+.text-gray-800 {
+  color: $gray-800;
+}
+
+.text-gray-900 {
+  color: $gray-900;
+}
+
+.text-gray-1000 {
+  color: $gray-1000;
+}
+
+.text-gray-1100 {
+  color: $gray-1100;
+  color: "red";
+}
+
+.heading-3-medium {
+  font-family: $font-base;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 35px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.text-4-medium {
+  font-family: $font-base;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+
+.heading-4-medium {
+  font-family: $font-base;
+  font-size: 21px;
+  font-weight: 500;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.text-5-medium {
+  font-family: $font-base !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  line-height: 18px !important;
+  letter-spacing: 0em !important; 
+  text-align: left !important; 
+  color: var(--text-color) !important;
+}
+
+.text-5-regular {
+  font-family: $font-base;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.text-6-regular {
+  font-family: $font-base;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.text-6-regular-gray {
+  font-family: $font-base;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #9da8ba;
+}
+
+.text-6-medium {
+  font-family: $font-base;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.text-7-medium {
+  font-family: $font-base;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 15px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.text-8-regular {
+  font-family: $font-base;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.bg-300 {
+  background-color: $gray-300;
+}

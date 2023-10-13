@@ -1,0 +1,28 @@
+// Import biến từ tệp user-variables.scss
+@import '../../../assets/scss/user-variables';
+
+.header {
+  font: {
+    size: 12px;
+    weight: 500;
+    family: 'Lexend';
+  }
+}
+
+.active {
+  color: $primary;
+}
+
+.title {
+  font: {
+    size: 23px;
+    weight: 500;
+    family: 'Lexend';
+  }
+  color: $black;
+  line-height: 28.75px;
+}
+
+.breadcrumb {
+  align-items: center;
+}
