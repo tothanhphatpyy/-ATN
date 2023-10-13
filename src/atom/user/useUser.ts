@@ -1,4 +1,4 @@
-import { useRecoilState, useRecoilValue } from "recoil"
+import { useRecoilState, useRecoilValue, useSetRecoilState } from "recoil"
 import { TokenProps, UserInfoProps, userAtom, userTokenSelector } from "./user"
 import { getUser } from "@services/zalo-api/user";
 import { useMount, useRequest } from "ahooks";
@@ -10,8 +10,7 @@ const OA_ID = import.meta.env.VITE_OA_ID;
 const OA_TYPE = import.meta.env.VITE_OA_TYPE;
 
 export const useUser = () => {
-    const [ userInfo, setUserInfo ] = useSet<UserInfoProps>(userAtom);
-    const 
+    const [ userInfo, setUserInfo ] = useRecoilState<UserInfoProps>(userAtom);
     const token = useRecoilValue<TokenProps>(userTokenSelector);
 
     const { runAsync: updateInfo } = useRequest(
