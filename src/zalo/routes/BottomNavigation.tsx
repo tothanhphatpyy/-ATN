@@ -45,11 +45,11 @@ const BottomNavigation = () => {
     return REQUIRED_FOLLOW_PAGES.includes(location.pathname);
   }, [location]);
 
-  if(isRequiredFollow){
+ /*  if(isRequiredFollow){
     if(!userInfo?.follow_oa){
       handleFollow();
     }
-  }
+  } */
 
   if (noBottomNav) {
     return <></>;

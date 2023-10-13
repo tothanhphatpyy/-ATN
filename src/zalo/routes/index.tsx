@@ -23,9 +23,9 @@ const ZaloRoutes = () => {
   const { userInfo } = useUser();
   const { loginZalo } = useAuth();
 
-  useEffect(() => {
+  /* useEffect(() => {
     if (!userInfo.xid) loginZalo();
-  }, []);
+  }, []); */
 
   return (
     <div className="bg-light dark__bg-1100 container-app">
