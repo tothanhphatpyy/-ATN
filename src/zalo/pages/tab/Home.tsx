@@ -5,6 +5,8 @@ import Text from "@shared/text/Text";
 import { useUser } from "@atom/user/useUser";
 
 const Home = () => {
+  const { userInfo } = useUser();
+  console.log(userInfo);
   return (
     <>
       {/* <Flex alignItems={'center'} className='container'>

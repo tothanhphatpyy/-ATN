@@ -1,9 +1,6 @@
 import React from "react";
 import { BrowserRouter } from "react-router-dom";
 
-import { ToastContainer, toast } from "react-toastify";
-
-import { CloseButton } from "@components/common/Toast";
 import ZaloRoutes from "@zalo/routes";
 
 declare const window: any;
@@ -16,11 +13,6 @@ const ZaloRoot = () => {
       }
     >
       <ZaloRoutes />
-      <ToastContainer
-        closeButton={CloseButton}
-        icon={false}
-        position={toast.POSITION.BOTTOM_LEFT}
-      />
     </BrowserRouter>
   );
 };

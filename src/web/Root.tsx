@@ -10,11 +10,6 @@ const WebRoot = () => {
   return (
     <BrowserRouter>
      <WebRoutes />
-    <ToastContainer
-      closeButton={CloseButton}
-      icon={false}
-      position={toast.POSITION.BOTTOM_LEFT}
-    />
     </BrowserRouter>
   );
 };

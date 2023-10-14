@@ -1,10 +1,16 @@
 import React, { useMemo } from "react";
-import { Link, useLocation, useNavigate, useNavigation } from "react-router-dom";
+import {
+  Link,
+  Navigate,
+  useLocation,
+  useNavigate,
+  useNavigation,
+} from "react-router-dom";
 import classNames from "classnames";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { handleFollow } from "@hooks/useFollow";
 import { useAuth } from "@hooks/useAuth";
 import { useUser } from "@atom/user/useUser";
+import { useFollow } from "@hooks/useFollow";
 
 const tabs = {
   "/": {
@@ -31,36 +37,48 @@ const tabs = {
 
 export const NO_BOTTOM_NAVIGATION_PAGES = ["/search", "/components/products/"];
 export const REQUIRED_FOLLOW_PAGES = ["/cart", "/profile"];
+const TYPE_OA = import.meta.env.VITE_OA_TYPE;
 
 const BottomNavigation = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const { userInfo, handleFollow } = useUser();
+  const { requestLoginZalo } = useAuth();
+  const { userInfo } = useUser();
+  const { handleFollowOA, handleFollowPhone } = useFollow();
 
   const noBottomNav = useMemo(() => {
     return NO_BOTTOM_NAVIGATION_PAGES.includes(location.pathname);
   }, [location]);
-  const isRequiredFollow = useMemo(() => {
-    return REQUIRED_FOLLOW_PAGES.includes(location.pathname);
-  }, [location]);
-
- /*  if(isRequiredFollow){
-    if(!userInfo?.follow_oa){
-      handleFollow();
-    }
-  } */
 
   if (noBottomNav) {
     return <></>;
   }
+
+  if (!userInfo?.xid) {
+    return null;
+  }
+
+  const handleNavigate = (path) => {
+    const shouldFollow = REQUIRED_FOLLOW_PAGES.includes(path); //check xem OA là User hay Fanpage
+    if (shouldFollow) {
+      //trường hợp OA là User
+      if (TYPE_OA == "user" && !userInfo?.phone) handleFollowPhone(path);
+      //Trường hợp OA là Fanpage
+      else if (TYPE_OA == "oa" && !userInfo?.follow_oa) handleFollowOA(path);
+      //navigate page
+      else navigate(path);
+    } else navigate(path);
+  };
 
   return (
     <nav className="bottom-navigation dark__bg-1000 bg-light">
       {Object.entries(tabs).map(([path, tab]) => (
         <div
           key={path}
-          onClick={() => {navigate(path)}}
+          onClick={() => {
+            handleNavigate(path);
+          }}
           className={classNames("tab", { active: location.pathname === path })}
         >
           <FontAwesomeIcon icon={tab.icon as any} />

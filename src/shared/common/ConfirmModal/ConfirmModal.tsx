@@ -2,6 +2,8 @@ import React, { useImperativeHandle, useState } from "react"
 import { Button, Image, Modal, Stack } from "react-bootstrap"
 import confirmModalTrash from "@assets/images/logo/Logo-DigiBird.png"
 import confirmModalSaveFile from "@assets/images/logo/Logo-DigiBird.png"
+import animated from "@assets/images/animation.json"
+import Lottie from 'lottie-react';
 
 export interface GlobalMessageProps {
   title?: string
@@ -63,7 +65,7 @@ const ConfirmModal = React.forwardRef((props, ref) => {
       case ConfirmType.Save:
         return confirmModalSaveFile
       case ConfirmType.Follow:
-        return <div>okela</div>
+        return <Lottie animationData={animated} loop={true}  style={{height: '120px', width: '120px'}} />
       default:
         return source || ""
     }
@@ -106,7 +108,7 @@ const ConfirmModal = React.forwardRef((props, ref) => {
   }
 
   return (
-    <Modal show={visible} onHide={hide} size="sm" centered className="px-3">
+    <Modal show={visible} onHide={hide} size="sm" centered className="px-4">
       <Modal.Body>
         <Stack className='mx-auto py-3' gap={3}>
           <div className="mx-auto">
@@ -117,8 +119,9 @@ const ConfirmModal = React.forwardRef((props, ref) => {
             <p className='text-4-medium text-black text-center'>{title}</p>
             <p className='text-6-regular text-center'>{content}</p>
           </div>
-          <Stack gap={3} className=''>
-            <Button
+          <Stack gap={3} className='mx-4'>
+            <Button 
+              className="py-2 text-4-medium"
               onClick={async () => {
                 await hide()
                 onPressAcceptButton && onPressAcceptButton()
@@ -128,6 +131,7 @@ const ConfirmModal = React.forwardRef((props, ref) => {
             </Button>
             {!!buttonCancelText && (
               <Button
+                className="py-2 text-4-medium"
                 variant='outline-secondary'
                 onClick={async () => {
                   await hide()
