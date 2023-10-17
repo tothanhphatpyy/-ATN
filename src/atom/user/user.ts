@@ -1,5 +1,5 @@
 import { atom, selector } from "recoil";
-
+import {effects_UNSTABLE} from "@hooks/useRecoilLogger"
 export interface UserInfoProps {
   user: UserProps | null;
   token: string | null;
@@ -22,6 +22,7 @@ export const userAtom = atom<UserInfoProps>({
     user: null,
     token: null,
   },
+  effects_UNSTABLE
 });
 
 export const userInfoSelector = selector<UserProps | null>({

@@ -32,7 +32,7 @@ const ZaloRoutes = () => {
       <ConfirmModal ref={confirmModalRef} />
       <ToastContainer />
       <Routes>
-        <Route path="/*" element={<Home />} />
+        <Route path="/*" element={<Home />} ></Route>
         <Route path="/favorite" element={<Dashboard />} />
         <Route path="/profile" element={<Profile />} />
         <Route
