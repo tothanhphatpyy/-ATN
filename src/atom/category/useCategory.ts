@@ -1,22 +1,24 @@
-import { useRecoilState } from "recoil"
+import { useRecoilState, useRecoilValue } from "recoil"
 import { useMount, useRequest } from "ahooks";
-import { getAllCategoryApi } from "@services/api/categoryApi";
-import { CategoryProps, categoryAtom } from "./category";
+import { getAllCategoriesApi } from "@services/api/categoryApi";
+import { CategoryProps, SubCategoryProps, categoryAtom, subCategorySelector } from "./category";
 
 export const useCategory = () => {
     const [category, setCategory] = useRecoilState<CategoryProps[]>(categoryAtom);
+    const subCategories = useRecoilValue<SubCategoryProps[]>(subCategorySelector)
 
-    const requestCategory = useRequest(() => getAllCategoryApi(), {
-        cacheKey: "all-categories",
+    const requestGetAllCategories = useRequest(() => getAllCategoriesApi(), {
+        cacheKey: "get-all-categories",
         manual: true,
-        onSuccess: (res: any) => {setCategory(res.data.categories)},
+        onSuccess: (res: any) => setCategory(res.data.categories),
+        onError: (err: any) => console.log("Api category", err.message)
     });
 
     useMount(() => {
-        if(category.length < 1){
-            requestCategory.runAsync();
+        if (category.length < 1) {
+            requestGetAllCategories.runAsync();
         }
     })
 
-    return { category };
+    return { category, subCategories, requestGetAllCategories, setCategory };
 }
