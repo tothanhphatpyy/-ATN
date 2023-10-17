@@ -6,6 +6,17 @@ import ZaloRoutes from "@zalo/routes";
 declare const window: any;
 
 const ZaloRoot = () => {
+  /* if (getSystemInfo().platform === "android") {
+    const androidSafeTop = Math.round(
+      (window as any).ZaloJavaScriptInterface.getStatusBarHeight() /
+        window.devicePixelRatio
+    );
+    document.body.style.setProperty(
+      "--zaui-safe-area-inset-top",
+      `${androidSafeTop}px`
+    );
+  } */
+
   return (
     <BrowserRouter
       basename={

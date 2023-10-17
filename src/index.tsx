@@ -12,6 +12,7 @@ import "react-toastify/dist/ReactToastify.min.css";
 import 'swiper/scss';
 import "@assets/scss/user.scss";
 import "../i18n-config";
+import "zmp-ui/zaui.css";
 
 declare const window: any;
 
