@@ -12,7 +12,6 @@ import Sliders from "@zalo/pages/components/sliders";
 import Demo from "@layouts/demo/Demo";
 import { useUser } from "@atom/user/useUser";
 import { useAuth } from "@hooks/useAuth";
-import PrivateRoute from "./PrivateRoute";
 import { GlobalLoading } from '@shared/common/GlobalLoading' 
 import { globalLoading, globalLoadingRef } from '@shared/common/GlobalLoading/GlobalLoading'
 import { ConfirmModal } from '@shared/common/ConfirmModal'
@@ -23,9 +22,9 @@ const ZaloRoutes = () => {
   const { userInfo } = useUser();
   const { loginZalo } = useAuth();
 
-  /* useEffect(() => {
-    if (!userInfo.xid) loginZalo();
-  }, []); */
+  useEffect(() => {
+    if(!userInfo?.xid) loginZalo();
+  }, []);
 
   return (
     <div className="bg-light dark__bg-1100 container-app">

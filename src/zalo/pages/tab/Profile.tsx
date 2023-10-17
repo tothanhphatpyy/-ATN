@@ -5,7 +5,6 @@ import { useUser } from "@atom/user/useUser";
 
 const Profile = () => {
   const { token } = useUser();
-  console.log('token', token)
   return (
     <div className="px-3">
       <NavbarTop />

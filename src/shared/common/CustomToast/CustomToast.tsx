@@ -1,8 +1,8 @@
 import React from "react"
 import { Image } from "react-bootstrap"
-import toastSuccessImage from "@assets/images/logo/Logo-DigiBird.png"
-import toastErrorImage from "@assets/images/logo/Logo-DigiBird.png"
-import toastInfoImage from "@assets/images/logo/Logo-DigiBird.png"
+import toastSuccessImage from "@assets/images/toast/success.png"
+import toastErrorImage from "@assets/images/toast/error.png"
+import toastInfoImage from "@assets/images/toast/info.png"
 import { toast } from "react-toastify"
 
 interface CustomToastProps {

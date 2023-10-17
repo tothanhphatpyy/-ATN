@@ -7,12 +7,12 @@ export interface UserInfoProps {
 
 export interface UserProps {
   xid: string;
-  name: string;
+  name: string | null;
   phone?: string | number | null;
-  img_url?: string | null;
+  profile_image?: string | null;
   email?: string | null;
   address?: string | null;
-  follow_oa: number;
+  follow_oa: number | string;
 }
 export type TokenProps = string | null;
 
