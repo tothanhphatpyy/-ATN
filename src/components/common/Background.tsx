@@ -1,8 +1,16 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-const Background = ({ image, overlay, position, video, className, style }) => {
+interface BackgroundProps {
+  image: string;
+  overlay?: boolean | string;
+  position?: string | { x: string; y: string };
+  video?: any[];
+  className?: string;
+  style?: React.CSSProperties;
+}
+
+const Background: React.FC<BackgroundProps> = ({ image, overlay, position, video, className, style }) => {
   const bgStyle = { backgroundImage: `url(${image})`, ...style };
   if (typeof position === 'string') {
     bgStyle.backgroundPosition = position;
@@ -36,21 +44,6 @@ const Background = ({ image, overlay, position, video, className, style }) => {
       )}
     </div>
   );
-};
-
-Background.propTypes = {
-  image: PropTypes.string.isRequired,
-  overlay: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
-  position: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.shape({
-      x: PropTypes.string,
-      y: PropTypes.string
-    })
-  ]),
-  video: PropTypes.array,
-  className: PropTypes.string,
-  style: PropTypes.object
 };
 
 export default Background;

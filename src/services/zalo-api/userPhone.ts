@@ -1,4 +1,4 @@
-import { CustomToastType, showCustomToast } from "@shared/common/CustomToast";
+import { CustomToastType, showCustomToast } from "@components/common/custom-toast";
 import axios from "axios";
 import { getAccessToken, getPhoneNumber } from "zmp-sdk";
 

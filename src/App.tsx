@@ -1,12 +1,19 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
-import ZaloRoot from "@zalo/Root";
 import Main from "./Main";
+import { App as AppContainer, SnackbarProvider, ZMPRouter } from "zmp-ui";
+import ZaloRoutes from "./routes";
 
 const App = () => {
   return (
     <Main>
-      <ZaloRoot />
+      <AppContainer>
+        <SnackbarProvider>
+          <ZMPRouter>
+            <ZaloRoutes />
+          </ZMPRouter>
+        </SnackbarProvider>
+      </AppContainer>
     </Main>
   );
 };

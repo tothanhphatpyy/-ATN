@@ -34,6 +34,8 @@ export default () => {
         '@services': path.resolve(__dirname, "src/services"),
         '@i18n': path.resolve(__dirname, "./i18n-config.ts"),
         '@shared': path.resolve(__dirname, "src/shared"),
+        '@pages': path.resolve(__dirname, "src/pages"),
+        '@locale': path.resolve(__dirname, "src/locale")
       },
     },
   });

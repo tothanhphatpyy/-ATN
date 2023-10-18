@@ -6,7 +6,7 @@ import Flex from '@components/common/Flex';
 import Logo from '@components/common/Logo';
 import NavbarVerticalMenu from './NavbarVerticalMenu';
 import ToggleButton from './ToggleButton';
-import routes from '@web/web-routes/siteMaps';
+// import routes from '@web/web-routes/siteMaps';
 import { capitalize } from '@helpers/utils';
 import NavbarTopDropDownMenus from '@components/navbar/top/NavbarTopDropDownMenus';
 import PurchaseCard from './PurchaseCard';
