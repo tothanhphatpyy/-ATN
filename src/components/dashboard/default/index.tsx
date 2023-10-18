@@ -32,6 +32,7 @@ import DigiBirdComponentCard from '@components/common/DigiBirdComponentCard';
 
 import generic1 from '@assets/img/generic/1.jpg';
 import UnsolvedTickets from './UnsolvedTickets';
+import { Page } from 'zmp-ui';
 
 const exampleCode = `<div className="d-flex justify-content-center flex-wrap gap-3">
 
@@ -57,7 +58,7 @@ const exampleCode = `<div className="d-flex justify-content-center flex-wrap gap
 
 const Dashboard = () => {
   return (
-    <>
+    <Page hideScrollbar={true}>
       <Row className="g-3 mb-3">
         <Col md={6} xxl={3}>
           <WeeklySales data={weeklySalesData} />
@@ -111,7 +112,7 @@ const Dashboard = () => {
           <TopProducts data={topProducts} className="h-100" />
         </Col>
       </Row> */}
-    </>
+    </Page>
   );
 };
 

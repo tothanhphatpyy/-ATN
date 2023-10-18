@@ -2,7 +2,8 @@ import React, { useImperativeHandle, useState } from "react"
 import { Button, Image, Modal, Stack } from "react-bootstrap"
 import confirmModalTrash from "@assets/images/logo/Logo-DigiBird.png"
 import confirmModalSaveFile from "@assets/images/logo/Logo-DigiBird.png"
-import animated from "@assets/images/animation.json"
+import animatedPhone from "@assets/icons/imgPhoneAnimate.json"
+import animatedFollow from "@assets/icons/imgFollowAnimate.json"
 import Lottie from 'lottie-react';
 
 export interface GlobalMessageProps {
@@ -36,6 +37,7 @@ export enum ConfirmType {
   Info,
   Warning,
   Follow,
+  Phone,
 }
 
 const ConfirmModal = React.forwardRef((props, ref) => {
@@ -65,7 +67,9 @@ const ConfirmModal = React.forwardRef((props, ref) => {
       case ConfirmType.Save:
         return confirmModalSaveFile
       case ConfirmType.Follow:
-        return <Lottie animationData={animated} loop={true}  style={{height: '120px', width: '120px'}} />
+        return <Lottie animationData={animatedFollow} loop={true}  style={{height: '120px', width: '120px'}} />
+      case ConfirmType.Phone:
+        return <Lottie animationData={animatedPhone} loop={true}  style={{height: '120px', width: '120px'}} />
       default:
         return source || ""
     }

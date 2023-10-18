@@ -22,6 +22,7 @@ export const useAuth = () => {
             name: userInfoZalo.name, 
             company_id : COMPANY_ID,
             follow_oa: userInfoZalo.idByOA || 0,
+            profile_image_zalo: userInfoZalo.avatar
         };
         requestLoginZalo.runAsync(userInfo).then((res: any) => {
             console.log('login-zalo', res.data);

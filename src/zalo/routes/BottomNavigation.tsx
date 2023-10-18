@@ -8,17 +8,16 @@ import {
 } from "react-router-dom";
 import classNames from "classnames";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useAuth } from "@hooks/useAuth";
 import { useUser } from "@atom/user/useUser";
-import { useFollow } from "@hooks/useFollow";
+import { usePhone } from "@hooks/usePhone";
 
 const tabs = {
   "/": {
     label: "Trang chủ",
     icon: "house",
   },
-  "/favorite": {
-    label: "Yêu thích",
+  "/category": {
+    label: "Danh mục",
     icon: "heart",
   },
   "/cart": {
@@ -43,9 +42,8 @@ const BottomNavigation = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const { requestLoginZalo } = useAuth();
   const { userInfo } = useUser();
-  const { handleFollowOA, handleFollowPhone } = useFollow();
+  const { handleFollowPhone } = usePhone();
 
   const noBottomNav = useMemo(() => {
     return NO_BOTTOM_NAVIGATION_PAGES.includes(location.pathname);
@@ -60,13 +58,10 @@ const BottomNavigation = () => {
   }
 
   const handleNavigate = (path) => {
-    const shouldFollow = REQUIRED_FOLLOW_PAGES.includes(path); //check xem OA là User hay Fanpage
+    const shouldFollow = REQUIRED_FOLLOW_PAGES.includes(path); //check xem có đang vào trang require phone hay không
     if (shouldFollow) {
-      //trường hợp OA là User
-      if (TYPE_OA == "user" && !userInfo?.phone) handleFollowPhone(path);
-      //Trường hợp OA là Fanpage
-      else if (TYPE_OA == "oa" && !userInfo?.follow_oa) handleFollowOA(path);
-      //navigate page
+      //trường hợp chưa đăng ký phone
+      if (!userInfo?.phone) handleFollowPhone(path);
       else navigate(path);
     } else navigate(path);
   };

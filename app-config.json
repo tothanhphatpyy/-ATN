@@ -3,7 +3,7 @@
     "title": "DigiBird Theme",
     "headerColor": "",
     "textColor": "black",
-    "statusBarColor": "transparent",
+    "statusBarColor": "#ffffff",
     "leftButton": "none",
     "statusBar": "transparent",
     "selfControlLoading": false,

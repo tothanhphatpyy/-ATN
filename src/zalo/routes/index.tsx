@@ -17,6 +17,9 @@ import { globalLoading, globalLoadingRef } from '@shared/common/GlobalLoading/Gl
 import { ConfirmModal } from '@shared/common/ConfirmModal'
 import { confirmModalRef } from '@shared/common/ConfirmModal/ConfirmModal'
 import { ToastContainer } from 'react-toastify'
+import { Box } from "zmp-ui";
+import Order from "@zalo/pages/tab/Order";
+import HeaderLayout from "@layouts/header/LayoutHeader";
 
 const ZaloRoutes = () => {
   const { userInfo } = useUser();
@@ -27,13 +30,15 @@ const ZaloRoutes = () => {
   }, []);
 
   return (
+    <Box flex flexDirection="column" className="h-screen">
     <div className="bg-light dark__bg-1100 container-app">
       <GlobalLoading ref={globalLoadingRef} />
       <ConfirmModal ref={confirmModalRef} />
       <ToastContainer />
       <Routes>
+        <Route element={<HeaderLayout />}>
         <Route path="/*" element={<Home />} ></Route>
-        <Route path="/favorite" element={<Dashboard />} />
+        <Route path="/category" element={<Order />} />
         <Route path="/profile" element={<Profile />} />
         <Route
           path="/components/products/:productLayout"
@@ -47,10 +52,13 @@ const ZaloRoutes = () => {
 
         <Route path="/demo-form" element={<Demo />} />
         <Route path="/cart" element={<Dashboard />} />
+        </Route>
         <Route path="*" element={<Navigate to="/errors/404" replace />} />
       </Routes>
       <BottomNavigation />
     </div>
+    </Box>
+    
   );
 };
 
