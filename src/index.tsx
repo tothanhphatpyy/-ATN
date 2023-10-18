@@ -12,8 +12,8 @@ import "react-datepicker/dist/react-datepicker.css";
 import "react-toastify/dist/ReactToastify.min.css";
 import 'swiper/scss';
 import "zmp-ui/zaui.css";
-import "../i18n-config";
 import "zmp-ui/zaui.css";
+import "../i18n-config";
 
 declare const window: any;
 

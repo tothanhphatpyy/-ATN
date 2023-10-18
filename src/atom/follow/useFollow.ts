@@ -1,6 +1,6 @@
 import { useRecoilState } from "recoil";
 import { FollowProps, visibleFollowAtom } from "./follow";
-import { ConfirmType, confirmModal } from "@shared/common/ConfirmModal/ConfirmModal";
+import { ConfirmType, confirmModal } from "@components/common/confirm-modal/ConfirmModal";
 import { getConfig } from "@services/zalo-api/appInfo";
 import { useUser } from '@atom/user/useUser';
 

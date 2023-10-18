@@ -3,7 +3,7 @@ import { getConfig } from "@services/zalo-api/appInfo";
 import {
   ConfirmType,
   confirmModal,
-} from "@shared/common/ConfirmModal/ConfirmModal";
+} from "@components/common/confirm-modal/ConfirmModal";
 import { useNavigate } from "react-router-dom";
 
 export const usePhone = () => {

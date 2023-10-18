@@ -1,8 +1,8 @@
-import HeaderFilter from "@zalo/components/header/header-homepage/HeaderFilter";
+import HeaderFilter from "@components/header/header-homepage/HeaderFilter";
 import React, { useEffect, useMemo } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import { Header } from "zmp-ui";
-import HeaderInside from "@zalo/components/header/header-page-inside/HeaderInside";
+import HeaderInside from "@components/header/header-page-inside/HeaderInside";
 
 export const NO_HEADER_PAGES = ["/dashboard"];
 

@@ -5,7 +5,7 @@ import ProfileDropdown from '@components/navbar/top/ProfileDropdown';
 import React, { useContext, useState } from 'react';
 import { Nav, OverlayTrigger, Tooltip, NavDropdown } from 'react-bootstrap';
 import NineDotMenu from './NineDotMenu';
-import { handleLocale, localeDefault } from '@helpers/config/locale';
+import { handleLocale, localeDefault } from '@locale/config';
 import { useConfig } from '@atom/config/useConfig';
 
 const TopNavRightSideNavItem = () => {
