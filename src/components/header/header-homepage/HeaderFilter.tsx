@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function HeaderFilter() {
   return (
-    <div className="d-flex py-2">
+    <div className="d-flex py-2 align-items-center">
       <Image
         src={logoDigiBird}
         height={35}
