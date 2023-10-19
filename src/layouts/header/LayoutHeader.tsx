@@ -22,7 +22,7 @@ const HeaderLayout = () => {
 
   return (
     <div>
-      {!noHeaderPage && <Header showBackIcon={false} title={renderHeader} />}
+      {!noHeaderPage && <Header showBackIcon={false} title={renderHeader} className="bg-light" />}
       <div className="pt-5">
         <Outlet />
       </div>
