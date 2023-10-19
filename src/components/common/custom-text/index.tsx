@@ -1,3 +1,3 @@
-import CustomText from "./CustomText"
+import Text from "./CustomText";
 
-export { CustomText }
+export { Text };

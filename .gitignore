@@ -13,11 +13,11 @@ pids
 *.pid.lock
 
 # Dependency directories
-node_modules/
-yarn.lock/
-package-lock.json/
-app-config.json/
-hr-config.json/
+node_modules
+yarn.lock
+package-lock.json
+app-config.json
+hr-config.json
 # Optional npm cache directory
 .npm
 
@@ -31,7 +31,7 @@ hr-config.json/
 .yarn-integrity
 
 # dotenv environment variables file
-# .env
+.env
 
 # Misc
 .DS_Store

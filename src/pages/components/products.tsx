@@ -1,4 +1,4 @@
-import Text from "@components/text/Text";
+import { Text } from "@components/common/custom-text";
 import ProductGrid from "@components/product/ProductGrid";
 import ProductList from "@components/product/ProductList";
 import React from "react";

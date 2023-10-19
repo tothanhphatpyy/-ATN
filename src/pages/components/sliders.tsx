@@ -1,5 +1,5 @@
 import Avatar from '@components/common/Avatar';
-import Text from '@components/text/Text';
+import { Text } from '@components/common/custom-text';
 import React from 'react'
 import { Col, Image } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';

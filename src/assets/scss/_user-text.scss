@@ -2,79 +2,97 @@
 //|   Fonts Family class
 //-----------------------------------------------*/
 .font-base {
-  font-family: $font-base; //Lexend
+  font-family: $font-base !important; 
 }
-
-//*-----------------------------------------------
-//|   Text color
-//-----------------------------------------------*/
-.color-base {
-  color: $text-color-primary !important;
-}
-
 
 //*-----------------------------------------------
 //|   Fonts weight class
 //-----------------------------------------------*/
-.text-100 {
-  font-weight: 100;
-}
-
-.text-200 {
-  font-weight: 200;
-}
-
-.text-300 {
-  font-weight: 300;
-}
-
-.text-400 {
-  font-weight: 400;
-}
-
-.text-500 {
-  font-weight: 500;
-}
-
-.text-600 {
-  font-weight: 600;
-}
-
-.text-700 {
-  font-weight: 700;
-}
-
-.text-800 {
+.extra-bold {
   font-weight: 800;
 }
 
-.text-900 {
-  font-weight: 900;
+.bold {
+  font-weight: 700;
 }
 
-.text-1000 {
-  font-weight: 1000;
+.semibold {
+  font-weight: 600;
+}
+
+.medium {
+  font-weight: 500;
+}
+
+.regular {
+  font-weight: 400;
+}
+
+.light {
+  font-weight: 300;
+}
+
+.extra-light {
+  font-weight: 200;
 }
 
 //*-----------------------------------------------
 //|   Fonts Size class
 //-----------------------------------------------*/
-.text-xs {
-  font-size: 12px;
+.heading-1 {
+  font-size: 48px;
 }
 
-.text-sm {
+.heading-2 {
+  font-size: 40px;
+}
+
+.heading-3 {
+  font-size: 32px;
+}
+
+.heading-4 {
+  font-size: 24px;
+}
+
+.heading-5 {
+  font-size: 20px;
+}
+
+.heading-6 {
+  font-size: 18px;
+}
+
+.body-1 {
+  font-size: 18px;
+}
+
+.body-2 {
+  font-size: 16px;
+}
+
+.body-3 {
   font-size: 14px;
 }
 
-
-
-.text-white {
-  color: $white;
+.body-4 {
+  font-size: 12px;
 }
 
-.text-black {
-  color: $black;
+.body-5 {
+  font-size: 10px;
+}
+
+//*-----------------------------------------------
+//|   Fonts color class
+//-----------------------------------------------*/
+
+.text-line {
+  color: $line;
+}
+
+.text-line-dark {
+  color: $line-dark;
 }
 
 .text-gray-100 {
@@ -119,102 +137,44 @@
 
 .text-gray-1100 {
   color: $gray-1100;
-  color: "red";
 }
 
-.heading-3-medium {
-  font-family: $font-base;
-  font-size: 28px;
-  font-weight: 500;
-  line-height: 35px;
-  letter-spacing: 0em;
-  text-align: left;
+.text-primary {
+  color: $primary;
 }
 
-.text-4-medium {
-  font-family: $font-base;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 20px;
-  letter-spacing: 0em;
-  text-align: left;
+.text-secondary {
+  color: $secondary;
 }
 
-
-.heading-4-medium {
-  font-family: $font-base;
-  font-size: 21px;
-  font-weight: 500;
-  line-height: 29px;
-  letter-spacing: 0em;
-  text-align: left;
+.text-soft-primary {
+  color: $soft-primary;
 }
 
-.text-5-medium {
-  font-family: $font-base !important;
-  font-size: 14px !important;
-  font-weight: 500 !important;
-  line-height: 18px !important;
-  letter-spacing: 0em !important; 
-  text-align: left !important; 
-  color: var(--text-color) !important;
+.text-success {
+  color: $success;
 }
 
-.text-5-regular {
-  font-family: $font-base;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 18px;
-  letter-spacing: 0em;
-  text-align: left;
+.text-info {
+  color: $info;
 }
 
-.text-6-regular {
-  font-family: $font-base;
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 16px;
-  letter-spacing: 0em;
-  text-align: left;
+.text-warning {
+  color: $warning;
 }
 
-.text-6-regular-gray {
-  font-family: $font-base;
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 16px;
-  letter-spacing: 0em;
-  text-align: left;
-  color: #9da8ba;
+.text-pending {
+  color: $pending;
 }
 
-.text-6-medium {
-  font-family: $font-base;
-  font-size: 13px;
-  font-weight: 500;
-  line-height: 16px;
-  letter-spacing: 0em;
-  text-align: left;
+.text-danger {
+  color: $danger;
 }
 
-.text-7-medium {
-  font-family: $font-base;
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 15px;
-  letter-spacing: 0em;
-  text-align: left;
+.text-light {
+  color: $light;
 }
 
-.text-8-regular {
-  font-family: $font-base;
-  font-size: 11px;
-  font-weight: 400;
-  line-height: 14px;
-  letter-spacing: 0em;
-  text-align: left;
-}
-
-.bg-300 {
-  background-color: $gray-300;
+.text-dark {
+  color: $dark;
 }

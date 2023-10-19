@@ -1,16 +1,21 @@
-import React from 'react'
-import { useTranslation } from 'react-i18next';
+import React from "react";
+import classNames from "classnames";
 
-interface CustomTextProps {
-  className: any;
-  children: any;
+interface TextProps {
+  className?: string;
+  style?: React.CSSProperties;
+  children: React.ReactNode;
 }
 
-const CustomText: React.FC<CustomTextProps> = ({className, children}) => {
-  const { t } = useTranslation();
+const Text: React.FC<TextProps> = ({ className, style, children }) => {
   return (
-    <div className={className}>{children ? children : '--'}</div>
-  )
-}
+    <span
+      className={classNames("font-base", className)}
+      style={style}
+    >
+      {children}
+    </span>
+  );
+};
 
-export default CustomText
+export default Text;
