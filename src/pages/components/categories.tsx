@@ -1,5 +1,5 @@
 import Avatar from "@components/common/Avatar";
-import Text from "@components/common/custom-text/CustomText";
+import Text from "@components/common/CustomText";
 import React from "react";
 import { Col } from "react-bootstrap";
 import { useCategory } from "@atom/category/useCategory";
