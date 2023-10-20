@@ -1,0 +1,62 @@
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.title{
+    font-size: 30px;
+    font-family: $font-base;
+  }
+
+
+.container-app {
+  max-width: 100% !important;
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 6.375rem;
+}
+
+.container {
+  padding-top: 1rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.bottom-navigation {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #edf2f9;
+  box-shadow: 0px -1px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5px 0;
+  z-index: 50;
+}
+
+/* Add your other styles here */
+.tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none !important;
+  color: #999;
+  transition: color 0.3s ease;
+}
+
+.active {
+  color: $primary;
+}
+
+.tab svg {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.tab span {
+  font-size: 12px;
+}
+
+

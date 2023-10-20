@@ -1,0 +1,12 @@
+{
+  "tab":{
+    "home": "Trang chủ",
+    "favorites": "Yêu thích",
+    "oder": "Đặt chỗ của tôi",
+    "messages": "Tin nhắn",
+    "account": "Cá nhân"
+  },
+  "homestay" : "Homestay",
+  "Hotel": "Khách sạn",
+  "total_order": "Tổng đơn"
+}

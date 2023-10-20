@@ -1,0 +1,32 @@
+{
+  "site_map": {
+    "dashboard": "Dashboard",
+    "employees": "Employees",
+    "leaves": "Leaves",
+    "shift_roster": "Shift Roster",
+    "attendance": "Attendance",
+    "holiday": "Holiday",
+    "designation": "Designation",
+    "department": "Department",
+    "appreciation": "Appreciation"
+  },
+  "tab_employees": {
+    "profile": "Profile",
+    "projects": "Projects",
+    "task": "Task",
+    "shift-roster": "Shift Roster",
+    "leaves": "Leaves",
+    "documents": "Documents",
+    "emergency-contacts": "Emergency Contacts",
+    "appreciation": "Appreciation",
+    "permissions": "Permissions"
+  },
+  "lang": "English",
+  "total_order": "Total Order",
+  "button": {
+    "search": "Search",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "save": "Save"
+  }
+}
