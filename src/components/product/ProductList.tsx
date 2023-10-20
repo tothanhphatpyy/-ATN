@@ -4,7 +4,7 @@ import { Button, Col, Image, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import classNames from "classnames";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import IconButton from "@components/common/IconButton";
+import IconButton from "@components/common/action-button/IconButton";
 import ProductImage from "./components/ProductImage";
 import StarRating from "./components/StarRating";
 import Flex from "@components/common/Flex";

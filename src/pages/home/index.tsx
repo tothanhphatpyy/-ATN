@@ -6,7 +6,7 @@ import { WelcomeUser } from "@components/header/header-homepage/WelcomeUser";
 import { useFollow } from "@atom/follow/useFollow";
 import { useProduct } from "@atom/product/useProduct";
 import { useWarehouse } from "@atom/warehouse/useWarehouse";
-import { Text } from "@components/common/custom-text";
+import { Text } from "@components/common";
 
 const Home = () => {
   const OA_TYPE = import.meta.env.VITE_OA_TYPE;

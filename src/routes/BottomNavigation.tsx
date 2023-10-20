@@ -1,40 +1,35 @@
-import React, { useMemo } from "react";
-import {
-  Link,
-  Navigate,
-  useLocation,
-  useNavigate,
-  useNavigation,
-} from "react-router-dom";
 import classNames from "classnames";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React, { useMemo } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
+import { Iconly } from "react-iconly";
+
 import { useUser } from "@atom/user/useUser";
 import { usePhone } from "@hooks/usePhone";
 
 const tabs = {
   "/": {
     label: "Trang chủ",
-    icon: "house",
+    icon: "Home",
   },
   "/category": {
     label: "Danh mục",
-    icon: "face-grin",
+    icon: "Category",
   },
   "/cart": {
     label: "Đặt chỗ của tôi",
-    icon: "calendar-days",
+    icon: "Buy",
   },
   "/chat": {
     label: "Tin nhắn",
-    icon: "message",
+    icon: "Chat",
   },
   "/profile": {
     label: "Cá nhân",
-    icon: "face-grin",
+    icon: "User",
   },
 };
 
-export const NO_BOTTOM_NAVIGATION_PAGES = ["/search", "/components/products/"];
+export const NO_BOTTOM_NAVIGATION_PAGES = ["/search", "/cart", "/components/products/"];
 export const REQUIRED_FOLLOW_PAGES = ["/cart", "/profile"];
 const TYPE_OA = import.meta.env.VITE_OA_TYPE;
 
@@ -76,8 +71,7 @@ const BottomNavigation = () => {
           }}
           className={classNames("tab", { active: location.pathname === path })}
         >
-          <FontAwesomeIcon icon={tab.icon as any} />
-          <span>{tab.label}</span>
+          <Iconly name={tab.icon} size={24} stroke="regular" />
         </div>
       ))}
     </nav>

@@ -9,12 +9,12 @@ interface TextProps {
 
 const Text: React.FC<TextProps> = ({ className, style, children }) => {
   return (
-    <span
+    <div
       className={classNames("font-base", className)}
       style={style}
     >
       {children}
-    </span>
+    </div>
   );
 };
 

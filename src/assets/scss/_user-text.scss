@@ -2,7 +2,7 @@
 //|   Fonts Family class
 //-----------------------------------------------*/
 .font-base {
-  font-family: $font-base !important; 
+  font-family: $font-base !important;
 }
 
 //*-----------------------------------------------
@@ -177,4 +177,32 @@
 
 .text-dark {
   color: $dark;
+}
+
+/* TYPOGRAPHY */
+.body-medium-medium {
+  //styleName: Body Text/Medium/Medium;
+  font-family: $font-base;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0em;
+}
+
+.body-large-semibold {
+  //styleName: Body Text/Large/SemiBold;
+  font-family: $font-base;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0em;
+}
+
+.body-medium-semibold {
+  //styleName: Body Text/Medium/SemiBold;
+  font-family: $font-base;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: 0em;
 }

@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 
-import Text from "@components/common/custom-text/CustomText";
+import Text from "@components/common/CustomText";
 import { useRecoilValue, useRecoilValueLoadable } from "recoil";
 import { userInfoSelector } from "@atom/user/user";
 

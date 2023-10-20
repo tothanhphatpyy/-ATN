@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 
-interface ImageProps {
+interface LazyImageProps {
   src: string;
   height?: number;
   width?: number;
@@ -12,7 +12,7 @@ interface ImageProps {
   props?: any;
 }
 
-const Image: FC<ImageProps> = ({
+const LazyImage: FC<LazyImageProps> = ({
   src,
   height,
   width,
@@ -34,4 +34,4 @@ const Image: FC<ImageProps> = ({
   </>
 );
 
-export default Image;
+export default LazyImage;

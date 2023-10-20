@@ -7,7 +7,7 @@ import { slugifyText } from "@helpers/utils";
 import Flex from "@components/common/Flex";
 import SoftBadge from "@components/common/SoftBadge";
 import { useNavigate } from "react-router-dom";
-import { Text } from "@components/common/custom-text";
+import { Text } from "@components/common";
 const courseFilters = [
   {
     label: "Products",
